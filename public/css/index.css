@@ -5,3 +5,41 @@ html {
 body {
   background: #fff;
 }
+
+/* Selectors Lesson 2 */
+
+.card-dark {
+  background: black;
+}
+
+.item {
+  color: rgb(1, 185, 1);
+}
+
+.item:first-child {
+  color: red;
+}
+
+.item:last-child {
+  color: white;
+}
+
+.item:only-child {
+  color: rgb(231, 128, 10);
+}
+
+/* :first-of-type
+:last-of-type
+:only-of-type */
+
+.item:nth-child(2) {
+  color: blue;
+}
+
+.item:not(p) {
+  color: blueviolet;
+}
+
+/* p:empty { color: #000;} */
+
+/* Selectors Lesson 3 */

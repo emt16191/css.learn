@@ -16,6 +16,18 @@ router.get('/', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
+router.get('/selector', function (req, res) {
+  res.render('selector', {})
+})
+
+router.get('/selector2', function (req, res) {
+  res.render('selector2', {})
+})
+
+router.get('/selector3', function (req, res) {
+  res.render('selector3', {})
+})
+
 // ================================================================
 
 // Підключаємо роутер до бек-енду
