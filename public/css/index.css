@@ -10,6 +10,20 @@ body {
   background: #fff;
 }
 
+/* Selectors Lesson 1 */
+
+* {
+  color: rgb(43, 255, 0);
+}
+
+.box {
+  background: rgb(87, 85, 84);
+}
+
+#user {
+  color: blue;
+}
+
 /* Selectors Lesson 2 */
 
 .card-dark {
