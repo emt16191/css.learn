@@ -1,7 +1,23 @@
+:root {
+  background: violet;
+}
+
 html {
   max-width: 720px;
 }
 
 body {
   background: #fff;
+}
+
+* {
+  color: rgb(43, 255, 0);
+}
+
+.box {
+  background: rgb(87, 85, 84);
+}
+
+#user {
+  color: blue;
 }
