@@ -12,9 +12,9 @@ body {
 
 /* Selectors Lesson 1 */
 
-* {
+/* * {
   color: rgb(43, 255, 0);
-}
+} */
 
 .box {
   background: rgb(87, 85, 84);
@@ -27,7 +27,7 @@ body {
 /* Selectors Lesson 2 */
 
 .card-dark {
-  background: black;
+  background: rgb(54, 53, 53);
 }
 
 .item {
@@ -61,3 +61,19 @@ body {
 /* p:empty { color: #000;} */
 
 /* Selectors Lesson 3 */
+
+.input-dark {
+  background: greenyellow;
+}
+
+.input-dark[required] {
+  background: red;
+}
+
+.input-dark[type='number'] {
+  background: violet;
+}
+
+.small-img[alt~='picsum'] {
+  height: 500px;
+}
