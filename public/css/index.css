@@ -27,7 +27,7 @@ body {
 /* Selectors Lesson 2 */
 
 .card-dark {
-  background: rgb(54, 53, 53);
+  background: rgb(167, 163, 163);
 }
 
 .item {
@@ -76,4 +76,41 @@ body {
 
 .small-img[alt~='picsum'] {
   height: 500px;
+}
+
+a[rel~='external'] {
+  color: green;
+}
+
+button[class|='btn'] {
+  background: violet;
+}
+
+a[class^='btn'] {
+  background: yellow;
+  color: black;
+}
+/*  
+'|' - единственое значение или с тирэ
+'^' - значение в начале
+'*' - положение значения не важно
+'$' - значение в конце */
+
+.btn::first-letter {
+  color: red;
+}
+
+.big-text::first-line {
+  color: red;
+}
+
+.input-dark::placeholder {
+  color: red;
+}
+
+.big-text::before,
+.big-text::after {
+  content: '&*&';
+  color: blue;
+  background: yellow;
 }
