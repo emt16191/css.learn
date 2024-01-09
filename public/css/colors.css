@@ -2,3 +2,62 @@ h1 {
   color: yellow;
   background: blue;
 }
+
+.card {
+  color: violet;
+}
+
+.card p {
+  color: red;
+  -webkit-text-fill-color: rgb(226, 208, 47);
+  -webkit-text-stroke: 0.5px rgb(55, 0, 255);
+}
+
+#twop:hover {
+  direction: rtl;
+  text-transform: capitalize;
+}
+
+#onep {
+  color: inherit;
+  -webkit-text-fill-color: initial;
+  -webkit-text-stroke: initial;
+  text-align: center;
+  text-transform: lowercase;
+  letter-spacing: 2cm;
+}
+
+#wr-lr {
+  writing-mode: vertical-lr;
+}
+#wr-rl {
+  writing-mode: vertical-rl;
+}
+#twop {
+  text-transform: uppercase;
+}
+
+pre {
+  tab-size: 10;
+}
+
+#tc p {
+  color: black;
+  -webkit-text-fill-color: unset;
+  -webkit-text-stroke: unset;
+  text-decoration: underline dotted red;
+}
+
+#tc .p-b {
+  text-decoration-line: overline;
+}
+
+#tc .p-c {
+  text-decoration-line: line-through;
+  text-decoration-style: solid;
+  text-decoration-color: blue;
+}
+
+#tc p:hover {
+  text-decoration-line: none;
+}
