@@ -32,7 +32,9 @@ router.get('/selector4', function (req, res) {
   res.render('selector4', {})
 })
 router.get('/colors', function (req, res) {
-  res.render('colors', {})
+  res.render('colors', {
+    layout: 'colors',
+  })
 })
 // ================================================================
 
