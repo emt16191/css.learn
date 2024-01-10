@@ -28,6 +28,14 @@ router.get('/selector3', function (req, res) {
   res.render('selector3', {})
 })
 
+router.get('/selector4', function (req, res) {
+  res.render('selector4', {})
+})
+router.get('/colors', function (req, res) {
+  res.render('colors', {
+    layout: 'colors',
+  })
+})
 // ================================================================
 
 // Підключаємо роутер до бек-енду
