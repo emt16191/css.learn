@@ -66,3 +66,21 @@ pre {
 #tc p:hover {
   text-decoration-line: none;
 }
+
+.ncard {
+  color: red;
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.bl-inl {
+  display: block;
+  margin: auto;
+  background: lightgrey;
+  width: 250px;
+}
+
+.fit {
+  width: fit-content;
+  margin: auto;
+}
