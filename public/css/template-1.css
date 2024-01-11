@@ -1,0 +1,51 @@
+.page {
+  background: #ffffff;
+}
+
+.page_content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 24px;
+}
+
+.header_logo {
+  font-size: 17px;
+}
+
+.divider {
+  margin: 0;
+  height: 1px;
+  background: #dee2e6;
+}
+
+.nav {
+  display: block;
+}
+
+.nav_link {
+  color: #343a40;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.nav_link:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.nav_inline .nav_link:not(:last-child) {
+  margin-right: 24px;
+}
+
+.nav_vertical .nav_link:not(:last-child) {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.header_nav_right {
+  margin-left: auto;
+  width: fit-content;
+}
