@@ -1,18 +1,62 @@
 <div class="page">
     <div class="page_content">
-        <header class="header row g-0">
-            <div class="header_logo col-3">
-                <span class="badge text-bg-primary">Jf</span>
-
-            </div>
-
-            <nav class="header_nav col-9">
-                <div class="header_nav_right">
-                    {{> nav list=header}}
+        <div class="page_block">
+            <header class="header row g-0">
+                <div class="col-3">
+                    {{> logo}}
                 </div>
-            </nav>
 
-        </header>
-        {{> divider}}
+                <nav class="header_nav col-9">
+                    <div class="header_nav_right">
+                        {{> nav list=header}}
+                    </div>
+                </nav>
+
+            </header>
+
+            {{> divider}}
+
+        </div>
+
+        <div class="page_block">
+            {{> hero title=hero.title text=hero.text}}
+        </div>
+
+        <div class="page_block">
+            <main class="row g-0 plans">
+                <div class="col plans_card">
+                    <div class="card">
+                        <div class="card-header">test</div>
+                        <div class="card-body">text
+                            <button class="btn btn-primary">button</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col plans_card">card</div>
+                <div class="col plans_card">card</div>
+            </main>
+        </div>
+
+        <div class="page_block">
+
+            {{> divider}}
+
+            <footer class="row footer">
+                <div class="col-3">
+                    {{> logo}}
+
+                    <span class="footer_copyright">Copyright 2024</span>
+                </div>
+
+                {{#each footer}}
+                <div class="col-3">
+                    <span class="footer_title">{{title}}</span>
+
+                    <span class="footer_links">{{> nav list=links isVertical=true}}</span>
+                </div>
+                {{/each}}
+            </footer>
+
+        </div>
     </div>
 </div>
