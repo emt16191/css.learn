@@ -97,3 +97,50 @@
 .plans_card:not(:last-of-type) {
   margin-right: 24px;
 }
+
+.card-header {
+  padding: 12px;
+  text-align: center;
+  font-size: 24px;
+  color: #212529;
+}
+
+.card-body {
+  padding: 24px;
+}
+
+.card_block {
+  text-align: center;
+}
+
+.card_block:not(:last-of-type) {
+  margin-bottom: 24px;
+}
+
+.card_price_amount {
+  font-size: 40px;
+  color: #212529;
+}
+
+.card_price_duration {
+  font-size: 29px;
+  color: #6c757d;
+}
+
+.card_description_item {
+  font-size: 16px;
+  color: #212529S;
+
+  display: block;
+}
+
+.card_description_item:not(:last-of-type) {
+  margin-bottom: 12px;
+}
+
+.card_button {
+  display: block;
+  width: 100%;
+  font-size: 19px;
+  padding: 9px;
+}

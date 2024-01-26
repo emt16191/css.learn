@@ -24,16 +24,12 @@
 
         <div class="page_block">
             <main class="row g-0 plans">
+                {{#each plans}}
                 <div class="col plans_card">
-                    <div class="card">
-                        <div class="card-header">test</div>
-                        <div class="card-body">text
-                            <button class="btn btn-primary">button</button>
-                        </div>
-                    </div>
+                    {{> card data=this}}
                 </div>
-                <div class="col plans_card">card</div>
-                <div class="col plans_card">card</div>
+                {{/each}}
+
             </main>
         </div>
 
