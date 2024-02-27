@@ -259,10 +259,44 @@
   font-weight: 500;
 }
 
-.about_discriotion {
+.about_discription {
   color: #212529;
   margin-bottom: 12px;
   font-size: 14px;
   font-weight: 400;
   line-height: 170%;
+}
+
+.archives {
+  color: #198754;
+}
+.social {
+  color: palevioletred;
+}
+
+.link_list {
+  padding: 24px;
+}
+
+.list_title {
+  display: block;
+  color: #212529;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.link_item {
+  display: block;
+  color: #007bff;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.link_list *:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.link_item:hover {
+  text-decoration: underline;
 }
