@@ -188,3 +188,7 @@ h1 {
   overflow-y: hidden;
   text-overflow: ellipsis;
 } */
+
+.hero_text:hover {
+  background-image: url(/img/dummy.png);
+}
