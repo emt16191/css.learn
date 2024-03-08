@@ -1,9 +1,19 @@
 :root {
-  background-image: url('/fav/android-chrome-512x512.png');
+  background-image: url('/fav/android-chrome-192x192.png');
   background-repeat: no-repeat;
-  background-position: bottom center;
-  background-color: rgba(198, 238, 18, 0.158);
-  height: 1000px;
+  background-position: bottom;
+  background-color: blue;
+}
+
+header {
+  display: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 900px;
 }
 
 div {
@@ -23,19 +33,16 @@ div {
 }
 
 li {
-  background-color: #532677;
-  border: 2px solid salmon;
+  background-color: blue;
+  border: 2px solid yellow;
   border-radius: 25px;
   margin: 15px;
   padding: 20px;
 }
 
-.w1 {
-  height: 750px;
-}
-
 li:hover {
   background-color: yellow;
+  border: 2px solid blue;
 }
 
 li:hover a {
@@ -44,7 +51,13 @@ li:hover a {
 
 a {
   font-size: 30px;
-  color: wheat;
+  color: yellow;
   text-align: center;
   text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  color: yellow;
+  font-size: 16px;
 }
