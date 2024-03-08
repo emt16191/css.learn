@@ -1,40 +1,56 @@
-// Підключаємо технологію express для back-end сервера
 const express = require('express')
-// Cтворюємо роутер - місце, куди ми підключаємо ендпоїнти
 const router = express.Router()
 
-// ================================================================
-
-// router.get Створює нам один ентпоїнт
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
+  res.render('index', {
+    page: {
+      title: 'Welcome to Jf World',
+    },
+  })
 })
 
 router.get('/selector', function (req, res) {
-  res.render('selector', {})
+  res.render('selector', {
+    layout: 'selectors',
+    page: {
+      title: 'Selector-1 Page',
+    },
+  })
 })
 
 router.get('/selector2', function (req, res) {
-  res.render('selector2', {})
+  res.render('selector2', {
+    layout: 'selectors',
+    page: {
+      title: 'Selector-2 Page',
+    },
+  })
 })
 
 router.get('/selector3', function (req, res) {
-  res.render('selector3', {})
+  res.render('selector3', {
+    layout: 'selectors',
+    page: {
+      title: 'Selector-3 Page',
+    },
+  })
 })
 
 router.get('/selector4', function (req, res) {
-  res.render('selector4', {})
+  res.render('selector4', {
+    layout: 'selectors',
+    page: {
+      title: 'Selector-4 Page',
+    },
+  })
 })
 
 router.get('/colors', function (req, res) {
   res.render('colors', {
     layout: 'colors',
+    page: {
+      title: 'Colors Page',
+    },
   })
 })
 
@@ -161,15 +177,7 @@ router.get('/template-1', function (req, res) {
   })
 })
 
-// ================================================================
-
-// router.get Створює нам один ентпоїнт
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/template-2', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('template-2', {
     layout: 'template-2',
     page: {
@@ -403,10 +411,265 @@ router.get('/template-2', function (req, res) {
       },
     ],
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
-// ================================================================
+router.get('/template-3', function (req, res) {
+  res.render('template-3', {
+    layout: 'template-3',
+    page: {
+      title: 'Template-3 Page',
+    },
+    header: [
+      {
+        text: 'Features',
+        url: 'https://example.com/home',
+      },
+      {
+        text: 'Enterprise',
+        url: 'https://example.com/about',
+      },
+      {
+        text: 'Support',
+        url: 'https://example.com/services',
+      },
+    ],
 
-// Підключаємо роутер до бек-енду
+    hero: {
+      title:
+        'First featurette heading. It’ll blow your mind.',
+      text: 'Some great placeholder content for the first featurette here. Imagine some exciting prose here.',
+      photo: 'https://picsum.photos/500/500',
+    },
+
+    blog: [
+      {
+        title: 'Latest post',
+        text: 'This is a wider card with supporting text below as a natural lead-in to additional content',
+        button: 'View details',
+        href: 'https://example.com/',
+        img: 'https://picsum.photos/140/140',
+      },
+      {
+        title: 'Featured story',
+        text: 'This is a wider card with supporting text below as a natural lead-in to additional content',
+        button: 'View details',
+        href: 'https://example.com/',
+        img: 'https://picsum.photos/140/140',
+      },
+      {
+        title: 'Popular post',
+        text: 'This is a wider card with supporting text below as a natural lead-in to additional content',
+        button: 'View details',
+        href: 'https://example.com/',
+        img: 'https://picsum.photos/140/140',
+      },
+    ],
+
+    form: {
+      title: 'Sign up form',
+      info: 'Some placeholder content in a paragraph below the heading and date.',
+      button: 'Sign up',
+      href: 'https://example.com/',
+    },
+
+    footer: [
+      {
+        title: 'Features',
+        links: [
+          {
+            text: 'Cool stuff',
+            url: 'https://example.com/cool-stuff',
+          },
+          {
+            text: 'Random feature',
+            url: 'https://example.com/random-feature',
+          },
+          {
+            text: 'Team feature',
+            url: 'https://example.com/team-feature',
+          },
+          {
+            text: 'Stuff for developers',
+            url: 'https://example.com/stuff-for-developers',
+          },
+        ],
+      },
+      {
+        title: 'Resources',
+        links: [
+          {
+            text: 'Resource name',
+            url: 'https://example.com/resource-name',
+          },
+          {
+            text: 'Another resource',
+            url: 'https://example.com/another-resource',
+          },
+          {
+            text: 'Final resource',
+            url: 'https://example.com/final-resource',
+          },
+        ],
+      },
+      {
+        title: 'About',
+        links: [
+          {
+            text: 'Team',
+            url: 'https://example.com/team',
+          },
+          {
+            text: 'Locations',
+            url: 'https://example.com/locations',
+          },
+          {
+            text: 'Privacy',
+            url: 'https://example.com/privacy',
+          },
+          {
+            text: 'Terms',
+            url: 'https://example.com/terms',
+          },
+        ],
+      },
+    ],
+  })
+})
+
+router.get('/template-4', function (req, res) {
+  res.render('template-4', {
+    layout: 'template-4',
+    page: {
+      title: 'Template-4 Page',
+    },
+    header: [
+      {
+        text: 'Features',
+        url: 'https://example.com/home',
+      },
+      {
+        text: 'Enterprise',
+        url: 'https://example.com/about',
+      },
+      {
+        text: 'Support',
+        url: 'https://example.com/services',
+      },
+    ],
+
+    main: {
+      heading: 'Oh yeah, it’s that good. See for yourself.',
+      description:
+        'Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.',
+      image: 'https://picsum.photos/500/500',
+      button: 'View details',
+      href: 'https://example.com/',
+    },
+
+    featured: [
+      {
+        heading: 'Featured title',
+        info: "Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.",
+        linkText: 'Call to action',
+        linkUrl: 'https://example.com/',
+        photo: 'https://picsum.photos/64/64',
+      },
+      {
+        heading: 'Featured title',
+        info: 'This is a wider card with supporting text below as a natural lead-in to additional content',
+        linkText: 'Call to action',
+        linkUrl: 'https://example.com/',
+        photo: 'https://picsum.photos/64/64',
+      },
+      {
+        heading: 'Featured title',
+        info: 'This is a wider card with supporting text below as a natural lead-in to additional content',
+        linkText: 'Call to action',
+        linkUrl: 'https://example.com/',
+        photo: 'https://picsum.photos/64/64',
+      },
+    ],
+
+    actions: [
+      {
+        heading: 'Checkout form',
+        text: 'Checkout',
+        url: 'https://example.com/',
+      },
+      {
+        heading: 'Login form',
+        text: 'Login',
+        url: 'https://example.com/',
+      },
+      {
+        heading: 'Sign up form',
+        text: 'Sign up',
+        url: 'https://example.com/',
+      },
+    ],
+
+    footer: [
+      {
+        title: 'Features',
+        links: [
+          {
+            text: 'Cool stuff',
+            url: 'https://example.com/cool-stuff',
+          },
+          {
+            text: 'Random feature',
+            url: 'https://example.com/random-feature',
+          },
+          {
+            text: 'Team feature',
+            url: 'https://example.com/team-feature',
+          },
+          {
+            text: 'Stuff for developers',
+            url: 'https://example.com/stuff-for-developers',
+          },
+        ],
+      },
+      {
+        title: 'Resources',
+        links: [
+          {
+            text: 'Resource name',
+            url: 'https://example.com/resource-name',
+          },
+          {
+            text: 'Another resource',
+            url: 'https://example.com/another-resource',
+          },
+          {
+            text: 'Final resource',
+            url: 'https://example.com/final-resource',
+          },
+        ],
+      },
+      {
+        title: 'About',
+        links: [
+          {
+            text: 'Team',
+            url: 'https://example.com/team',
+          },
+          {
+            text: 'Locations',
+            url: 'https://example.com/locations',
+          },
+          {
+            text: 'Privacy',
+            url: 'https://example.com/privacy',
+          },
+          {
+            text: 'Terms',
+            url: 'https://example.com/terms',
+          },
+        ],
+      },
+    ],
+  })
+})
+
 module.exports = router

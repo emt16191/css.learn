@@ -1,0 +1,96 @@
+<div class="page">
+    <div class="page_content">
+
+        <header class="page_block">
+            <div class="header">
+                <div>
+                    {{> logo}}
+                </div>
+
+                <nav class="header_nav">
+                    <div class="header_nav_right">
+                        {{> nav list=header}}
+                    </div>
+                </nav>
+
+            </div>
+        </header>
+
+        <section class="page_block">
+            {{#with hero}}
+            <div class="hero">
+                {{> hero title=title text=text}}
+                {{#with button}}
+                <a class="button" href="{{url}}">{{text}}</a>
+                {{/with}}
+            </div>
+            {{/with}}
+        </section>
+
+        <section class="page_block">
+            <div class="flex_container">
+                {{#each preview}}
+                {{> cardPreview class="flex_item" data=this}}
+                {{/each}}
+            </div>
+        </section>
+
+        <main class="page_block">
+            <div class="main">
+                <div class="row g-0">
+                    <div class="col-12">
+                        <div class="list_header">
+                            <div>
+                                <h2 class="list_title">List of posts</h2>
+                            </div>
+                            <div>
+                                <div class="button_pad">
+                                    {{#each categories}}
+                                    <button class="category_button">{{text}}</button>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <div class="list">
+                            {{#each news}}
+                            {{> cardPost data=this}}
+                            {{/each}}
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <aside class="list_aside">
+                            <div class="about">
+                                <h4 class="about_title">About</h4>
+                                <p class="about_description">{{about}}</p>
+                            </div>
+                            {{> linkList data=archive title=Archives}}
+
+                            {{> linkList data=social title=Social}}
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="page_block">
+            <div class="footer">
+                <div>
+                    {{> logo}}
+
+                    <span class="footer_copyright">Copyright 2024</span>
+                </div>
+
+                {{#each footer}}
+                <div>
+                    <span class="footer_title">{{title}}</span>
+
+                    <span class="footer_links">{{> nav list=links isVertical=true}}</span>
+                </div>
+                {{/each}}
+            </div>
+        </footer>
+
+    </div>
+</div>
