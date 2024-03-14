@@ -9,7 +9,21 @@
         </div>
     </nav>
 </header>
-
+{{#with hero}}
+<div class="hero">
+    <div class="hero_content">
+        <h1 class="hero_title">{{title}}</h1>
+        <p class="hero_text">{{text}}</p>
+    </div>
+    <img src="{{photo}}" alt="Hero image" class="hero_image">
+</div>
+{{/with}}
+<main class="blog">
+    {{#each blog}}
+    {{> cardBlog data=this}}
+    {{/each}}
+</main>
+<div class="form">2</div>
 
 
 
