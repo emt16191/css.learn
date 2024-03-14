@@ -171,16 +171,53 @@
   color: var(--color-text);
 }
 
-.card_button {
+.button {
   display: inline-block;
   padding: var(--space-m) var(--space-xm);
   font-size: var(--size-d);
-  color: var(--color-white);
   text-decoration: none;
   border-radius: calc(var(--border-radius) / 3);
+}
+
+.card_button {
+  color: var(--color-white);
   background-color: var(--color-primary);
 }
 
-.card_button:hover {
+.button:hover {
   opacity: 0.7;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primary);
+  padding: var(--space-l);
+  border-radius: var(--border-radius);
+}
+
+.form_content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.form_title {
+  font-size: 27px;
+  font-weight: var(--weight-title);
+  color: var(--color-white);
+}
+
+.form_info {
+  font-size: var(--size-d);
+  font-weight: var(--weight-text);
+  color: var(--color-white);
+}
+
+.form_button {
+  color: var(--color-text);
+  background-color: var(--color-white);
+  width: 100%;
+  max-width: 160px;
 }
