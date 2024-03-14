@@ -1,0 +1,203 @@
+/* :root {
+  background: violet;
+} */
+
+html {
+  max-width: 720px;
+}
+
+body {
+  background: #fff;
+}
+
+/* Selectors Lesson 1 */
+
+/* * {
+  color: rgb(43, 255, 0);
+} */
+
+.box {
+  background: rgb(87, 85, 84);
+}
+
+#user {
+  color: blue;
+}
+
+/* Selectors Lesson 2 */
+
+.card-dark {
+  background: rgb(231, 224, 224);
+}
+
+.item {
+  color: rgb(1, 185, 1);
+}
+
+.item:first-child {
+  color: red;
+}
+
+.item:last-child {
+  color: white;
+}
+
+.item:only-child {
+  color: rgb(231, 128, 10);
+}
+
+/* :first-of-type
+:last-of-type
+:only-of-type */
+
+.item:nth-child(2) {
+  color: blue;
+}
+
+.item:not(p) {
+  color: blueviolet;
+}
+
+/* p:empty { color: #000;} */
+
+/* Selectors Lesson 3 */
+
+.input-dark {
+  background: greenyellow;
+}
+
+.input-dark[required] {
+  background: red;
+}
+
+.input-dark[type='number'] {
+  background: violet;
+}
+
+.small-img[alt~='picsum'] {
+  height: 500px;
+}
+
+a[rel~='external'] {
+  color: green;
+}
+
+button[class|='btn'] {
+  background: violet;
+}
+
+a[class^='btn'] {
+  background: yellow;
+  color: black;
+}
+/*  
+'|' - единственое значение или с тирэ
+'^' - значение в начале
+'*' - положение значения не важно
+'$' - значение в конце */
+
+.btn::first-letter {
+  color: red;
+}
+
+.big-text::first-line {
+  color: red;
+}
+
+.input-dark::placeholder {
+  color: red;
+}
+
+.big-text::before,
+.big-text::after {
+  content: '&*&';
+  color: blue;
+  background: yellow;
+}
+/* lesson 4 */
+
+#anc:target {
+  color: red;
+}
+
+.link:link {
+  color: violet;
+}
+
+.link:hover {
+  color: green;
+}
+
+.card:hover {
+  background: lightcoral;
+}
+
+.link:active {
+  color: black;
+}
+
+.card:active {
+  background: lightgreen;
+}
+
+input {
+  background: grey;
+}
+input::placeholder {
+  color: blanchedalmond;
+}
+input:focus {
+  background: lightskyblue;
+}
+
+.card:focus-within {
+  background: wheat;
+}
+.card:lang(en) {
+  background: lightsalmon;
+}
+
+.card:lang(ru) > span::after {
+  content: ' (ru)';
+}
+
+button {
+  background: greenyellow;
+}
+
+button:enabled {
+  background: green;
+}
+button:disabled {
+  background: aquamarine;
+}
+.inp:read-write {
+  color: blue;
+}
+
+input[type='checkbox']:checked ~ span {
+  background: red;
+}
+
+.valid:valid {
+  background: yellow;
+}
+.valid:invalid {
+  background: orange;
+}
+
+.numb:out-of-range {
+  background: purple;
+}
+
+.numb:in-range {
+  background: olive;
+}
+
+/* .numb:invalid {
+  background: yellow;
+} */
+
+input:placeholder-shown ~ span {
+  background: pink;
+}

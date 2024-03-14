@@ -1,33 +1,23 @@
-{{!--
-Це код container файлу для index сторінки,
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
---}}
+<main>
+    {{!-- <header></header> --}}
+    <div>
+        <menu class="menu">
+            <ul class="lessons">
+                <li><a href="/selector">Selector lesson 1</a></li>
+                <li><a href="/selector2">Selector lesson 2</a></li>
+                <li><a href="/selector3">Selector lesson 3</a></li>
+                <li><a href="/selector4">Selector lesson 4</a></li>
+                <li><a href="/colors">Colors lesson 1</a></li>
+            </ul>
 
-<div class="p-5 box">
-    <h1 style="color: yellow;">USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
-    <h1 id="user">USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
+            <ul class="template">
+                <li><a href="/template-1">Template-1</a></li>
+                <li><a href="/template-2">Template-2</a></li>
+                <li><a href="/template-3">Template-3</a></li>
+                <li><a href="/template-4">Template-4</a></li>
+            </ul>
+        </menu>
+    </div>
+    <footer>Copyright Jf 2024</footer>
 
-    <button type="button" class="btn btn-primary">Купити</button>
-
-    <div class="box">This text from div box</div>
-</div>
-
-<menu>
-    <ul>
-        <li><a href="/selector">Selector lesson 1</a></li>
-        <li><a href="/selector2">Selector lesson 2</a></li>
-        <li><a href="/selector3">Selector lesson 3</a></li>
-        <li><a href="/selector4">Selector lesson 4</a></li>
-        <li><a href="/colors">Colors lesson 1</a></li>
-        <li><a href="/template-1">Template-1</a></li>
-        <li><a href="/template-2">Template-2</a></li>
-
-    </ul>
-</menu>
-
-{{!--
-Цей код містить лише те, що буде виводитись в
-
-<body>
-    Адже наш layout/default.hbs має вже структуру HTML
-    --}}
+</main>
