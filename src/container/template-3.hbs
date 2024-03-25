@@ -1,7 +1,8 @@
 <header class="header">
-    <div>
+    <a href="/">
         {{> logo}}
-    </div>
+    </a>
+    <a href="#footer" class="anchor">.</a>
 
     <nav class="header_nav">
         <div class="header_nav_right">
@@ -9,15 +10,31 @@
         </div>
     </nav>
 </header>
+
+<div class="modal_test">
+    <div class="modal_text">
+        {{hero.text}} {{hero.text}} {{hero.text}}
+        <img src="{{hero.photo}}" alt="Modal image" class="modal_image">
+        <div class="modal_text">{{hero.text}} {{hero.text}} {{hero.text}} {{hero.text}} {{hero.text}}</div>
+    </div>
+</div>
+
 {{#with hero}}
 <div class="hero">
     <div class="hero_content">
         <h1 class="hero_title">{{title}}</h1>
         <p class="hero_text">{{text}}</p>
     </div>
-    <img src="{{photo}}" alt="Hero image" class="hero_image">
+    <div class="hero_slider">
+        <div class="hero_slider_icon hero_slider_left">{{left}}</div>
+        <img src="{{photo}}" alt="Hero image" class="hero_image">
+        <div class="hero_slider_icon hero_slider_right">{{right}}</div>
+    </div>
 </div>
 {{/with}}
+
+<input type="text" class="input">
+
 <main class="blog">
     {{#each blog}}
     {{> cardBlog data=this}}
@@ -46,7 +63,7 @@
 
     {{#each footer}}
     <div>
-        <span class="footer_title">{{title}}</span>
+        <span id="footer" class="footer_title">{{title}}</span>
 
         <span class="footer_links">{{> nav list=links isVertical=true}}</span>
     </div>
