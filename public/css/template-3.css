@@ -1,3 +1,25 @@
+@keyframes fly {
+  from {
+    top: 0;
+    left: 0;
+    color: green;
+  }
+  33% {
+    top: 500px;
+    left: 500px;
+    color: grey;
+  }
+  66% {
+    left: 0;
+    color: #0d6efd;
+  }
+  to {
+    top: 0;
+    left: 0;
+    color: red;
+  }
+}
+
 :root {
   --space-m: 12px;
   --space-xm: 16px;
@@ -88,6 +110,7 @@
   font-size: var(--size-d);
   text-decoration: none;
   line-height: 100%;
+  transition: color 1s;
 }
 
 .nav_link:hover {
@@ -190,6 +213,8 @@
   font-size: var(--size-d);
   text-decoration: none;
   border-radius: calc(var(--border-radius) / 3);
+  transition-property: opacity;
+  transition-duration: 1s;
 }
 
 .card_button {
@@ -256,6 +281,7 @@
 
   position: absolute;
   top: calc(50% - 15px);
+  transition: opacity 1s;
 }
 
 .hero_slider_left {
@@ -273,9 +299,10 @@
 
 .modal_test {
   position: fixed;
-  bottom: var(--size-l);
-  right: var(--size-l);
-
+  /* bottom: var(--size-l);
+  right: var(--size-l); */
+  top: 0;
+  left: 0;
   width: 600px;
   /* height: 100px; */
   background-color: blue;
@@ -285,7 +312,18 @@
   font-style: italic;
   line-height: 150%;
   /* text-align: center; */
-  z-index: 1;
+  z-index: 7;
+  /* transition-property: bottom, right, color;
+  transition-duration: 6s;
+  transition-timing-function: ease-in-out; */
+}
+
+body:hover .modal_test {
+  /* bottom: 400px;
+  right: calc(50% - 300px);
+  color: red; */
+  animation-name: fly;
+  animation-duration: 3s;
 }
 
 .modal_image {
