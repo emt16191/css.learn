@@ -10,32 +10,20 @@
     </nav>
 </header>
 
-<main class="main">
-    {{#with messages}}
-    <div class="messages">
-        <h1 class="messages_title">{{title}}</h1>
-
-        {{#each list}}
-        <div class="msg">
-            <stong class="msg_name">{{name}}</stong>
-            <p class="msg_text">{{message}}</p>
-            <span class="msg_day">{{day}}</span>
-        </div>
-        {{/each}}
-
-        <a href="#" class="messages_link">All messages</a>
-
+<main class="hero">
+    {{#with info}}
+    <div class="info">
+        <h1 class="info_title">{{title}}</h1>
+        <p class="info_description">{{description}}</p>
     </div>
     {{/with}}
 
     {{#with form}}
     <form class="form">
-        <h2 class="form_title">{{title}}</h2>
-
         <div class="form_inputs">
             {{#each inputs}}
-            <input class="form_input" id="form-input-{{id}}" placeholder="{{placeholder}}" type="{{type}}"
-                name="{{name}}" />
+            <input type="{{type}}" class="form_input" id="input_id-{{id}}" placeholder="{{placeholder}}"
+                name="{{name}}">
             {{/each}}
         </div>
 
@@ -44,23 +32,57 @@
             <input type="checkbox" name="{{name}}" id="{{name}}">
             <div></div>
             <label for="{{name}}">{{label}}</label>
+            {{/with}}
         </div>
 
-        {{/with}} <button type="submit" class="form_button">{{button}}</button>
+        <button type="submit" class="form_button">{{button}}</button>
+
+        <div class="form_line"></div>
 
         <p class="form_info">{{info}}</p>
+
+        {{/with}}
     </form>
-    {{/with}}
 </main>
 
-<div class="advantages">
-    {{#each advantages}}
-    <div class="advantage">
-        <strong class="advantage_title">{{title}}</strong>
-        <p class="advantage_text">{{text}}</p>
+{{#with updates}}
+<section class="updates">
+    <h4 class="updates_title">{{title}}</h4>
+    <div class="updates_list">
+        {{#each list}}
+        <div class="updates_list_item">
+            <div class="user_pic">
+                {{!-- <img src="#" alt="img-{{nickname}}"> --}}
+            </div>
+            <div class="news">
+                <strong class="news_nickname">{{nickname}}</strong>
+                <p class="news_text">{{description}}</p>
+            </div>
+        </div>
+        {{/each}}
     </div>
-    {{/each}}
+
+    {{#with show_all}}
+    <a href="{{url}}" class="all_updates">{{text}}</a>
+    {{/with}}
+
+</section>
+{{/with}}
+
+{{#with expirience}}
+<div class="expirience">
+    <h2 class="expirience_title">{{title}}</h2>
+    <div class="expirience_badge">{{badge}}</div>
+    <div class="expirience_list">
+        {{#each list}}
+        <div class="exp_card">
+            <strong class="exp_card_title">{{name}}</strong>
+            <p class="exp_card_details">{{details}}</p>
+        </div>
+        {{/each}}
+    </div>
 </div>
+{{/with}}
 
 <footer class="footer">
     <div>
