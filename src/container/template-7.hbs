@@ -1,7 +1,67 @@
 {{#with header }}
 <header class="pageHeader">
-    {{brandName}}
-    {{userOnline}}
-    {{ad.text}} {{ad.url}}
+    <div class="header">
+        <a href="/" class="logo">{{brandName}}</a>
+        <nav class="nav">
+            {{#each links}}
+            <a href="{{url}}" class="itemLink">{{text}}</a>
+            {{/each}}
+        </nav>
+    </div>
+    <div class="headerInfo">
+        <div class="adPlace">
+            <span>Ad</span>
+            <a href="{{ad.url}}" class="adItem itemLink">{{ad.text}}</a>
+        </div>
+        <div class="onlineCounter">Users online: {{userOnline}}
+        </div>
+    </div>
+
 </header>
 {{/with}}
+
+<div class="hero">
+    {{#with hero}}
+    <div class="heroTitle">{{title}}</div>
+    <div class="heroDescription">{{description}}</div>
+    <a href="{{button.url}}" class="heroButton">{{button.text}}</a>
+    {{/with}}
+</div>
+
+<div class="about">
+    {{#with about}}
+    <div class="aboutHeading">{{heading}}</div>
+    <div class="aboutInfo">{{info}}</div>
+    {{/with}}
+</div>
+
+<main class="main">
+    <div class="mainTitle">
+        <span>Our Articles</span>
+        <a href="#">View All</a>
+    </div>
+    <div class="articles">
+        {{#each articles}}
+        <div id="{{id}}" class="articleCard">
+            <img class="imgCard" src="{{photo}}" alt="{{name}}">
+            {{#if isNew}}
+            <div class="cardBadge">NEW</div>
+            {{/if}}
+            <div class="cardTitle">{{name}}</div>
+            <div class="cardDescription">{{description}}</div>
+            <a href="#" class="cardButton">ReadAll</a>
+        </div>
+        {{/each}}
+    </div>
+</main>
+
+<footer class="footer">
+    {{#with footer}}
+    <div class="footerLinks">
+        {{#each pages}}
+        <a href="{{path}}" class="itemLink">{{name}}</a>
+        {{/each}}
+    </div>
+    <div class="copyrights">{{copyright}}</div>
+    {{/with}}
+</footer>
