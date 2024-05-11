@@ -8,6 +8,35 @@
   background-color: #111827;
 }
 
+a[class$='Button'] {
+  transition-property: background-color color;
+  transition-duration: 0.7s;
+}
+
+a[class$='Button']:hover {
+  color: var(--primary-color);
+  background-color: white;
+}
+
+a[class$='Button']:active {
+  opacity: 0.6;
+}
+
+a[class$='Link'] {
+  border-bottom: 1px solid transparent;
+  transition-property: color, border;
+  transition-duration: 0.7s;
+}
+
+a[class$='Link']:hover {
+  color: var(--primary-color);
+  border-color: #fff;
+}
+
+a[class$='Link']:active {
+  opacity: 0.6;
+}
+
 .page {
   background-color: #111827;
   display: flex;
@@ -17,6 +46,7 @@
 
 .pageContent {
   max-width: var(--page-with);
+  min-width: 470px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -40,7 +70,7 @@
   padding: 12px 0px;
 }
 
-.logo {
+.logoButton {
   background-color: var(--primary-color);
   border-radius: 10px;
   padding: 8px 12px;
@@ -50,17 +80,6 @@
   font-size: 14px;
   line-height: 100%;
   color: #fff;
-  transition-property: background-color color;
-  transition-duration: 0.7s;
-}
-
-.logo:hover {
-  color: var(--primary-color);
-  background-color: white;
-}
-
-.logo:active {
-  opacity: 0.7;
 }
 
 .nav {
@@ -77,21 +96,9 @@
   font-size: 16px;
   line-height: 100%;
   text-align: center;
-  padding: 8px 0px;
+  padding: 2px 0px;
   color: #fff;
   text-decoration: none;
-  border-radius: 10px;
-  transition-property: color, background-color;
-  transition-duration: 0.7s;
-}
-
-.itemLink:hover {
-  color: var(--primary-color);
-  background-color: white;
-}
-
-.itemLink:active {
-  opacity: 0.7;
 }
 
 .headerInfo {
@@ -112,7 +119,7 @@
   color: #885ffb;
 }
 
-.adItem {
+.adItemLink {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 14px;
@@ -245,16 +252,79 @@
   text-decoration: none;
 }
 
-/* ________________________ */
-
 .articles {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   gap: 32px;
+  flex-wrap: wrap;
 }
 
-/* ________________________ */
+.articleCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-basis: 360px;
+}
+
+.imgCard {
+  border-radius: 24px;
+  max-width: 360px;
+}
+
+.cardBadge {
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 2px 6px;
+  align-self: flex-end;
+  background: rgba(251, 95, 95, 0.5);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  color: #fff;
+
+  position: relative;
+  bottom: 50px;
+  right: 15px;
+}
+
+.cardTitle {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  color: #fff;
+}
+
+.cardDescription {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #9ca3af;
+}
+
+.cardButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 10px;
+  padding: 8px 16px;
+  width: 85px;
+  height: 30px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 100%;
+  background: #885ffb;
+  color: #fff;
+}
 
 .footer {
   display: flex;
