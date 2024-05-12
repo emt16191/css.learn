@@ -1,24 +1,4 @@
-{{#with header }}
-<header class="pageHeader">
-    <div class="header">
-        <a href="/" class="logoButton">{{brandName}}</a>
-        <nav class="nav">
-            {{#each links}}
-            <a href="{{url}}" class="itemLink">{{text}}</a>
-            {{/each}}
-        </nav>
-    </div>
-    <div class="headerInfo">
-        <div class="adPlace">
-            <span>Ad</span>
-            <a href="{{ad.url}}" class="adItemLink">{{ad.text}}</a>
-        </div>
-        <div class="onlineCounter">Users online: {{userOnline}}
-        </div>
-    </div>
-
-</header>
-{{/with}}
+{{>headerDark data=header}}
 
 <div class="hero">
     {{#with hero}}
@@ -42,26 +22,9 @@
     </div>
     <div class="articles">
         {{#each articles}}
-        <div id="{{id}}" class="articleCard">
-            <img class="imgCard" src="{{photo}}" alt="{{name}}">
-            {{#if isNew}}
-            <div class="cardBadge">new</div>
-            {{/if}}
-            <div class="cardTitle">{{name}}</div>
-            <div class="cardDescription">{{description}}</div>
-            <a href="#" class="cardButton">Read All</a>
-        </div>
+        {{> articleCardDark}}
         {{/each}}
     </div>
 </main>
 
-<footer class="footer">
-    {{#with footer}}
-    <div class="footerLinks">
-        {{#each pages}}
-        <a href="{{path}}" class="itemLink">{{name}}</a>
-        {{/each}}
-    </div>
-    <div class="copyrights">{{copyright}}</div>
-    {{/with}}
-</footer>
+{{>footerDark data=footer}}
