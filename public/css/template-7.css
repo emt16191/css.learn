@@ -1,11 +1,29 @@
 :root {
-  --space-s: 8px;
-  --primary-color: #885ffb;
   --page-with: 1150px;
+
+  --space-s: 8px;
+
+  --primary-color: #885ffb;
+  --background-color: #111827;
+  --border-color: #253041;
+  --border-link-color: #ffffff;
+
+  --txt-color-primary: #ffffff;
+  --txt-color-second: #9ca3af;
+
+  --font-size-d: 14px;
+
+  --font-weight-b: 700;
+  --font-weight-d: 400;
+
+  --line-height-d: 100%;
+  --line-height-m: 150%;
+  --line-height-l: 170%;
+
   --font-family: 'Roboto', sans-serif;
   --second-family: 'Inter', sans-serif;
+
   scroll-behavior: smooth;
-  background-color: #111827;
 }
 
 a[class$='Button'] {
@@ -15,7 +33,7 @@ a[class$='Button'] {
 
 a[class$='Button']:hover {
   color: var(--primary-color);
-  background-color: white;
+  background-color: var(--border-link-color);
 }
 
 a[class$='Button']:active {
@@ -30,7 +48,7 @@ a[class$='Link'] {
 
 a[class$='Link']:hover {
   color: var(--primary-color);
-  border-color: #fff;
+  border-color: var(--border-link-color);
 }
 
 a[class$='Link']:active {
@@ -38,7 +56,7 @@ a[class$='Link']:active {
 }
 
 .page {
-  background-color: #111827;
+  background-color: var(--background-color);
   display: flex;
   justify-content: center;
   padding: 0 15px;
@@ -51,6 +69,16 @@ a[class$='Link']:active {
   display: flex;
   flex-direction: column;
   gap: 60px;
+
+  color: var(--txt-color-primary);
+
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-d);
+  line-height: var(--line-height-d);
+}
+
+a {
+  color: var(--txt-color-primary);
 }
 
 .pageHeader {
@@ -58,7 +86,7 @@ a[class$='Link']:active {
   flex-direction: column;
   position: sticky;
   top: 0;
-  background-color: #111827;
+  background-color: var(--background-color);
   z-index: 3;
 }
 
@@ -66,7 +94,7 @@ a[class$='Link']:active {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px solid #253041;
+  border-bottom: 1px solid var(--border-color);
   padding: 12px 0px;
 }
 
@@ -75,11 +103,9 @@ a[class$='Link']:active {
   border-radius: 10px;
   padding: 8px 12px;
   text-decoration: none;
-  font-family: var(--font-family);
-  font-weight: 700;
+
+  font-weight: var(--font-weight-b);
   font-size: 14px;
-  line-height: 100%;
-  color: #fff;
 }
 
 .nav {
@@ -91,13 +117,9 @@ a[class$='Link']:active {
 }
 
 .itemLink {
-  font-family: var(--font-family);
-  font-weight: 400;
   font-size: 16px;
-  line-height: 100%;
   text-align: center;
   padding: 2px 0px;
-  color: #fff;
   text-decoration: none;
 }
 
@@ -112,29 +134,19 @@ a[class$='Link']:active {
   border-radius: 4px;
   padding: 2px 6px;
   background: rgba(136, 95, 251, 0.2);
-  font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: var(--font-weight-b);
   font-size: 14px;
-  line-height: 100%;
-  color: #885ffb;
+  color: var(--primary-color);
 }
 
 .adItemLink {
-  font-family: var(--font-family);
-  font-weight: 400;
   font-size: 14px;
-  line-height: 100%;
-  color: #fff;
   text-decoration: none;
   margin-left: 4px;
 }
 
 .onlineCounter {
-  font-family: var(--font-family);
-  font-weight: 400;
   font-size: 14px;
-  line-height: 100%;
-  color: #fff;
 }
 
 .hero {
@@ -154,23 +166,20 @@ a[class$='Link']:active {
   );
 }
 .heroTitle {
-  font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: var(--font-weight-b);
   font-size: 36px;
-  line-height: 100%;
   text-align: center;
-  color: #fff;
   max-width: 600px;
   width: 100%;
 }
 
 .heroDescription {
   font-family: var(--second-family);
-  font-weight: 400;
+
   font-size: 16px;
-  line-height: 150%;
+  line-height: var(--line-height-m);
   text-align: center;
-  color: #9ca3af;
+  color: var(--txt-color-second);
   max-width: 600px;
   width: 100%;
 }
@@ -181,12 +190,11 @@ a[class$='Link']:active {
   width: 150px;
   height: 40px;
   background: #885ffb;
-  font-family: var(--font-family);
-  font-weight: 700;
+
+  font-weight: var(--font-weight-b);
   font-size: 16px;
-  line-height: 100%;
   text-align: center;
-  color: #fff;
+
   text-decoration: none;
 }
 
@@ -204,19 +212,16 @@ a[class$='Link']:active {
 }
 
 .aboutHeading {
-  font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: var(--font-weight-b);
   font-size: 24px;
-  line-height: 100%;
-  color: #fff;
 }
 
 .aboutInfo {
   font-family: var(--second-family);
-  font-weight: 400;
+
   font-size: 14px;
-  line-height: 170%;
-  color: #9ca3af;
+  line-height: var(--line-height-l);
+  color: var(--txt-color-second);
 }
 
 .main {
@@ -233,22 +238,17 @@ a[class$='Link']:active {
 }
 
 .mainTitle > span {
-  font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: var(--font-weight-b);
   font-size: 32px;
-  line-height: 100%;
-  color: #fff;
 }
 
 .mainTitle > a {
   border: 1px solid #9ca3af;
   border-radius: 10px;
   padding: 12px 20px;
-  font-family: var(--font-family);
-  font-weight: 700;
+
+  font-weight: var(--font-weight-b);
   font-size: 16px;
-  line-height: 100%;
-  color: #fff;
   text-decoration: none;
 }
 
@@ -263,7 +263,7 @@ a[class$='Link']:active {
 .articleCard {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   gap: 16px;
   flex-basis: calc((var(--page-with) - 64px) / 3);
@@ -290,31 +290,22 @@ a[class$='Link']:active {
   padding: 2px 6px;
   align-self: flex-end;
   background: rgba(251, 95, 95, 0.5);
-  font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: var(--font-weight-b);
   font-size: 16px;
-  line-height: 100%;
-  color: #fff;
-
   position: relative;
   bottom: 50px;
   right: 15px;
 }
 
 .cardTitle {
-  font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: var(--font-weight-b);
   font-size: 18px;
-  line-height: 100%;
-  color: #fff;
 }
 
 .cardDescription {
-  font-family: var(--font-family);
-  font-weight: 400;
   font-size: 14px;
-  line-height: 150%;
-  color: #9ca3af;
+  line-height: var(--line-height-m);
+  color: var(--txt-color-second);
 }
 
 .cardButton {
@@ -327,13 +318,11 @@ a[class$='Link']:active {
   padding: 8px 16px;
   width: 85px;
   height: 30px;
-  font-family: var(--font-family);
-  font-weight: 700;
+
+  font-weight: var(--font-weight-b);
   font-size: 14px;
   text-decoration: none;
-  line-height: 100%;
-  background: #885ffb;
-  color: #fff;
+  background: var(--primary-color);
 }
 
 .footer {
@@ -353,10 +342,7 @@ a[class$='Link']:active {
 }
 
 .copyrights {
-  font-family: var(--font-family);
-  font-weight: 400;
   font-size: 16px;
-  line-height: 100%;
-  color: #9ca3af;
+  color: var(--txt-color-second);
   align-self: center;
 }
