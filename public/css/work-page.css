@@ -1,0 +1,102 @@
+:root {
+  --space-s: 8px;
+  --space-m: 12px;
+  --space-xm: 16px;
+  --space-l: 24px;
+  --space-b: 36px;
+
+  --size-s: 14px;
+  --size-d: 16px;
+  --size-l: 20px;
+  --size-b: 24px;
+
+  --color-border: #dee2e6;
+  --color-border-light: #d3dee9;
+  --color-primary: #0d6efd;
+  --color-white: #ffffff;
+  --color-title: #212529;
+  --color-text: #343a40;
+  --color-text-2: #6c757d;
+  --color-background: #f8f9fa;
+
+  --border-radius: 12px;
+
+  --weight-title: 600;
+  --weight-text: 400;
+
+  --page-width: 1000px;
+
+  scroll-behavior: smooth;
+}
+
+/* ======================= */
+
+* {
+  font-family: 'Bad Script', cursive;
+}
+
+.page {
+  background: var(--color-white);
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.page_content {
+  max-width: var(--page-width);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* ======================= */
+
+.header {
+  padding: var(--space-l) 0;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+
+  position: sticky;
+  max-width: var(--page-width);
+  width: 100%;
+  top: 0;
+  /* left: calc(50% - (var(--page-width) / 2)); */
+
+  background-color: var(--color-white);
+  z-index: 6;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: 17px;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-radius: calc(var(--border-radius) / 2);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+.name_page {
+  max-width: calc(
+    var(--page-width) - 74px - var(--border-radius)
+  );
+  width: 100%;
+  min-width: 160px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

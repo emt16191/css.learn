@@ -54,6 +54,15 @@ router.get('/colors', function (req, res) {
   })
 })
 
+router.get('/work-page', function (req, res) {
+  res.render('work-page', {
+    layout: 'work-page',
+    page: {
+      title: 'Work Page',
+    },
+  })
+})
+
 router.get('/template-1', function (req, res) {
   res.render('template-1', {
     layout: 'template-1',
