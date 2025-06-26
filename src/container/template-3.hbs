@@ -11,29 +11,31 @@
     </nav>
 </header>
 
-<div class="modal_test">
+{{!-- <div class="modal_test">
     <div class="modal_text">
         {{hero.text}} {{hero.text}} {{hero.text}}
         <img src="{{hero.photo}}" alt="Modal image" class="modal_image">
         <div class="modal_text">{{hero.text}} {{hero.text}} {{hero.text}} {{hero.text}} {{hero.text}}</div>
     </div>
-</div>
+</div> --}}
 
 {{#with hero}}
-<div class="hero">
-    <div class="hero_content">
-        <h1 class="hero_title">{{title}}</h1>
-        <p class="hero_text">{{text}}</p>
-    </div>
-    <div class="hero_slider">
-        <div class="hero_slider_icon hero_slider_left">{{left}}</div>
-        <img src="{{photo}}" alt="Hero image" class="hero_image">
-        <div class="hero_slider_icon hero_slider_right">{{right}}</div>
+<div class="hero_container">
+    <div class="hero">
+        <div class="hero_content">
+            <h1 class="hero_title">{{title}}</h1>
+            <p class="hero_text">{{text}}</p>
+        </div>
+        <div class="hero_slider">
+            <div class="hero_slider_icon hero_slider_left">{{left}}</div>
+            <img src="{{photo}}" alt="Hero image" class="hero_image">
+            <div class="hero_slider_icon hero_slider_right">{{right}}</div>
+        </div>
     </div>
 </div>
 {{/with}}
 
-<input type="text" class="input">
+{{!-- <input type="text" class="input"> --}}
 
 <main class="blog">
     {{#each blog}}
@@ -69,3 +71,5 @@
     </div>
     {{/each}}
 </footer>
+{{!--
+<div class="test">Test</div> --}}
